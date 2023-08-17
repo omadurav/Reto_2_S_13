@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
 
     private IEnumerator UpdateTimer()
     {
-        while (remainingDuration > 0)
+        while (remainingDuration >= 0)
         {
             uiText.text = $"{remainingDuration / 60:00} : {remainingDuration % 60:00}";
 
