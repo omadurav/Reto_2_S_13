@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer(float moveVertical)
     {
-        float _moveSpeed = 4.5f;
+        float _moveSpeed = 8.0f;
 
         if (moveVertical > 0)
         {
