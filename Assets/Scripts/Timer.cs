@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
     {
         while (remainingDuration >= 0)
         {
-            uiText.text = $"{remainingDuration / 60:00} : {remainingDuration % 60:00}";
+            uiText.text = $"{remainingDuration / 60:00}:{remainingDuration % 60:00}";
 
             //interpolacion inversa
             uiFill.fillAmount = Mathf.InverseLerp(0, duration, remainingDuration);
