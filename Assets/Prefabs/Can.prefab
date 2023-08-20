@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 233012076107004240}
   - component: {fileID: 5714681609140862532}
+  - component: {fileID: 4043559868367260269}
   m_Layer: 0
-  m_Name: Latas
-  m_TagString: Untagged
+  m_Name: Can
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +48,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.62
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4043559868367260269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652963346118499403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb73dbf8dca5604f9b69ee30ac7bced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &470757114905057689
 PrefabInstance:
   m_ObjectHideFlags: 0

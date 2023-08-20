@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private UnityEngine.UI.Image uiFill;
     [SerializeField] private TMP_Text uiText;
+    private GameBehavior _gameBehavior;
 
     public int duration;
 
@@ -16,7 +15,15 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        Being(duration);
+        _gameBehavior = GameObject.Find("GameManager").GetComponent<GameBehavior>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && _gameBehavior.IsTalking)
+        {
+            Being(duration);
+        }
     }
 
     private void Being(int seconds)
@@ -36,13 +43,12 @@ public class Timer : MonoBehaviour
             remainingDuration--;
             yield return new WaitForSeconds(1f);
         }
-
         OnEnd();
     }
 
     private void OnEnd()
     {
-        Debug.Log("Tiempo finalizado");
+        _gameBehavior.TimeIsOver = true;
     }
 }
 

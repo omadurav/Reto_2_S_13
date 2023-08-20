@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer(float moveVertical)
     {
-        float _moveSpeed = 8.0f;
+        float _moveSpeed = 4.0f;
 
         if (moveVertical > 0)
         {
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (moveVertical < 0)
         {
-            _moveSpeed = 2.6f;
+            _moveSpeed = 1.6f;
             _rbPlayer.MovePosition(this.transform.position + this.transform.forward * moveVertical * _moveSpeed * Time.fixedDeltaTime);
             _animator.SetBool("isWalkingBack", true);
         }
