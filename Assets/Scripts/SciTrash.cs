@@ -6,6 +6,8 @@ using UnityEngine;
 public class SciTrash : MonoBehaviour
 {
     [SerializeField] private DialogueUIController _dialogueUIController;
+    [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip _audioClipWinner;
 
     private GameBehavior _gameBehavior;
 
@@ -22,11 +24,13 @@ public class SciTrash : MonoBehaviour
             {
                 _dialogueUIController.ShowDialogueUI();
                 _gameBehavior.IsTalking = true;
+                SoundController.instance.PlaySound(_audioClip);
             }
             else
             {
                 if (_gameBehavior.TotalItemsInScene == _gameBehavior.CurrentCollected)
                 {
+                    SoundController.instance.PlaySound(_audioClipWinner);
                     _gameBehavior.Winner = true;
                 }
             }

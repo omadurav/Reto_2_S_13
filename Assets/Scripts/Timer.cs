@@ -20,15 +20,15 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && _gameBehavior.IsTalking)
+        if(Input.GetKeyUp(KeyCode.Q) && _gameBehavior.IsTalking) 
         {
             Being(duration);
         }
     }
 
-    private void Being(int seconds)
+    public void Being(int second)
     {
-        remainingDuration = seconds;
+        remainingDuration = duration;
         StartCoroutine(UpdateTimer());
     }
 

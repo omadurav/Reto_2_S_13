@@ -15,6 +15,7 @@ public class GameBehavior : MonoBehaviour
     [SerializeField] private GameObject _panelItemsComplete;
     [SerializeField] private GameObject _panelWinner;
     [SerializeField] private GameObject _panelLoser;
+    [SerializeField] private GameObject _panelPause;
 
     private int _totalItemsInScene;
     private int _currentCollected = 0;
@@ -22,6 +23,7 @@ public class GameBehavior : MonoBehaviour
     private bool inMission = false;
     private bool _timeIsOver = false;
     private bool _winner = false;
+    private bool isPaused = false;
 
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
     public bool InMission { get => inMission; set => inMission = value; }
@@ -100,6 +102,28 @@ public class GameBehavior : MonoBehaviour
         SceneManager.LoadScene(0);
 
         Time.timeScale = 1f;
+    }
+
+    public void Pause()
+    {
+        if(isPaused == false)
+        {
+            Time.timeScale = 0f;
+            isPaused = true;
+            _panelPause.gameObject.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            isPaused = false;
+            _panelPause.gameObject.SetActive(false);
+        }
+        
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 

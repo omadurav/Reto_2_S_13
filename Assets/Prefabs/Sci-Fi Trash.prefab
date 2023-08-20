@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8097185711126636885}
   - component: {fileID: 3418532592996763386}
+  - component: {fileID: 783147312}
   m_Layer: 0
   m_Name: Sci-Fi Trash
   m_TagString: Untagged
@@ -277,3 +278,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.020381, y: 4.122366, z: 2.1836433}
   m_Center: {x: 0.030611396, y: 2.030558, z: 0.34692955}
+--- !u!114 &783147312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869042511077848047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef32275bc2e49434280adb99a733ff5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogueUIController: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 69a98d5891574144ebc4967cbe12ce26, type: 3}
+  _audioClipWinner: {fileID: 8300000, guid: e2b41bb75792d0845a249f55e3ba63bc, type: 3}
