@@ -6,7 +6,7 @@ using UnityEngine;
 public class SciTrash : MonoBehaviour
 {
     [SerializeField] private DialogueUIController _dialogueUIController;
-    [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioClip _audioClipStartDialog;
     [SerializeField] private AudioClip _audioClipWinner;
 
     private GameBehavior _gameBehavior;
@@ -24,7 +24,7 @@ public class SciTrash : MonoBehaviour
             {
                 _dialogueUIController.ShowDialogueUI();
                 _gameBehavior.IsTalking = true;
-                SoundController.instance.PlaySound(_audioClip);
+                SoundController.instance.PlaySound(_audioClipStartDialog);
             }
             else
             {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine.SceneManagement;
 
 public class GameBehavior : MonoBehaviour
@@ -124,6 +123,11 @@ public class GameBehavior : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(1);
     }
 
 
