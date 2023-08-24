@@ -128,6 +128,8 @@ public class GameBehavior : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(1);
+        isPaused = false;
+        Time.timeScale = 1f;
     }
 
 
